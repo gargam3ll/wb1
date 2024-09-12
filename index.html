@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .small-middle-container {
+        margin: auto;
+        width: 40%;
+      }
+
+      /* darken the control area */
+
+      .carousel .carousel-control {
+        opacity: 1;
+      }
+      .carousel .carousel-control.left {
+        background-image: linear-gradient(
+          to right,
+          rgb(0, 0, 0) 0,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+      .carousel .carousel-control.right {
+        background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0) 0,
+          rgb(0, 0, 0) 100%
+        );
+      }
+
+      /* add darkness over the image */
+      .item {
+        position: relative;
+      }
+      .item:before {
+        content: "";
+        background: rgba(0, 0, 0, 0.2);
+        /* change this value from 0.1 to 1; */
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+      }
+
+      .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        .image-container {
+            padding: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+
+    <div class="container">
+      <p class="fs-2 fw-bold">О нас</p>
+      <p class="fs-5">
+        <b>Magazine</b> — это ваш надежный партнер в сфере веб-дизайна,
+        маркетинга и рекламы. Мы предоставляем полный спектр услуг, которые
+        помогут вашему бизнесу расти и процветать в цифровом пространстве. Наша
+        команда экспертов создает эффективные стратегии и уникальные решения,
+        которые включают в себя графический дизайн, печать,
+        интернет-исследования, маркетинг и разработку веб-сайтов.
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 image-container">
+                    <img src="img/m.png" class="img-fluid" alt="Image 1">
+                </div>
+                <div class="col-md-4 image-container">
+                    <img src="img/m2.png" class="img-fluid" alt="Image 2">
+                </div>
+                <div class="col-md-4 image-container">
+                    <img src="img/m3.png" class="img-fluid" alt="Image 3">
+                </div>
+            </div>
+        </div>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        Мы гордимся тем, что работаем с малым и средним бизнесом, понимая, что каждый проект
+        требует индивидуального подхода. Мы стремимся создать решения, которые
+        помогут вам выделиться среди конкурентов и привлечь вашу целевую
+        аудиторию. Наша цель — быть вашим надежным партнером и поддерживать вас
+        на каждом этапе вашего пути к успеху. С Magazine вы получите не просто
+        услуги, а профессиональное сопровождение, которое поможет вам
+        реализовать все ваши бизнес-цели.
+      </p>
+    </div>
+
+    <!--TODO докрутить слайдер, доработать поле о нас, добавить информацию о клиентах-->
+    <div class="container py-3">
+        <p class="fs-2 fw-bold">Наши клиенты</p>
+    </div>
+
+    <div class="album py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img
+                class="card-img-top"
+                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                alt="Thumbnail [100%x225]"
+                src="img/stb.jpg"
+                data-holder-rendered="true"
+                style="height: 225px; width: 100%; display: block"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                    <b>Starbucks</b> - Ребрендинг и веб-дизайн Проект: В 2011 году Starbucks
+                    обновила свой логотип и провела ребрендинг, чтобы укрепить свою позицию
+                    на рынке. В рамках проекта был также обновлен веб-сайт. Результат: Новый
+                    логотип и современный веб-дизайн помогли Starbucks привлечь молодежную
+                    аудиторию и увеличить количество онлайн-заказов, что способствовало
+                    росту продаж и улучшению имиджа бренда.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img
+                class="card-img-top"
+                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                alt="Thumbnail [100%x225]"
+                src="img/nk.png"
+                data-holder-rendered="true"
+                style="height: 225px; width: 100%; display: block"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                    <b>Nike</b> - Кампания по цифровому маркетингу Проект: Nike провела
+                    масштабную кампанию по цифровому маркетингу, включая запуск сайта и
+                    социальных медиа-кампаний для продвижения новых коллекций обуви и
+                    одежды. Результат: Кампания привлекла миллионы новых клиентов, увеличила
+                    онлайн-продажи и укрепила позиции бренда как лидера в области спортивной
+                    моды и инноваций.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img
+                class="card-img-top"
+                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                alt="Thumbnail [100%x225]"
+                src="img/apl.jpg"
+                data-holder-rendered="true"
+                style="height: 225px; width: 100%; display: block"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                    <b>Apple</b> - Разработка веб-сайта и интеграция с мобильными
+                    приложениями Проект: В рамках запуска нового iPhone, Apple обновила свой
+                    веб-сайт и интегрировала его с мобильными приложениями для удобства
+                    пользователей. Результат: Обновленный веб-сайт и интеграция с
+                    приложениями улучшили пользовательский опыт и повысили конверсии,
+                    способствуя успешным продажам нового продукта и увеличению числа
+                    загрузок приложений.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="fs-2 fw-bold container">Наши тарифные планы</p>
+
+    <section class="pricing py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Free Tier -->
+          <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">
+                  Базовый
+                </h5>
+                <h6 class="card-price text-center">
+                  $500-1000<span class="period"></span>
+                </h6>
+                <hr />
+                <ul class="fa-ul">
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Простая разработка веб-сайта (до 5 страниц)
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>Основной SEO-анализ, Оптимизация сайта для поисковых систем, включая базовое исследование ключевых слов.
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Дизайн логотипа
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Основные услуги по графике
+                  </li>
+                  <li class="text-muted">
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Один месяц поддержки и обслуживания сайта
+                  </li>
+                  <li class="text-muted">
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    > 1 рекламная кампания в социальных сетях (например, Facebook или Instagram) в месяц.
+                  </li>
+                  <li class="text-muted">
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    > Поддержка по электронной почте с ответом в течение 48 часов.
+                  </li>
+                </ul>
+                <div class="d-grid">
+                  <a href="#" class="btn btn-primary text-uppercase">Заказать</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Plus Tier -->
+          <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">
+                    Стандартный
+                </h5>
+                <h6 class="card-price text-center">
+                  $1500-3000<span class="period"></span>
+                </h6>
+                <hr />
+                <ul class="fa-ul">
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Разработка веб-сайта с функционалом (до 15 страниц)
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>Продвинутый SEO-анализ и оптимизация
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Дизайн и разработка нескольких графических материалов (баннеры, флаеры)
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Основные услуги по интернет-маркетингу (e-mail рассылки, социальные сети)
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Три месяца поддержки и обслуживания сайта
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>Приоритетная поддержка по телефону и электронной почте с ответом в течение 24 часов.
+                  </li>
+                </ul>
+                <div class="d-grid">
+                  <a href="#" class="btn btn-primary text-uppercase">Заказать</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pro Tier -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">
+                  Плюс
+                </h5>
+                <h6 class="card-price text-center">
+                  $5000-∞<span class="period"></span>
+                </h6>
+                <hr />
+                <ul class="fa-ul">
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Продвинутый сайт с индивидуальными функциями и интеграциями (e-commerce, пользовательские панели и т.д.).
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>Полный брендбук, разработка всех необходимых материалов для маркетинга и рекламы.
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Комплексная SEO-оптимизация, продвинутые кампании в Google Ads и социальных сетях, контент-маркетинг и email-маркетинг.
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Полный доступ к круглосуточной поддержке по телефону, электронной почте и через чаты.
+                  </li>
+                </ul>
+                <div class="d-grid">
+                  <a href="#" class="btn btn-primary text-uppercase">Заказать</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="small-middle-container">
+      <div class="row centered-form">
+        <div class="col-12">
+          <form class="px-4 py-3 border rounded shadow-sm">
+            <div class="mb-3">
+              <label for="exampleDropdownFormEmail1" class="form-label"
+                >Почта для обратной связи</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleDropdownFormEmail1"
+                placeholder="email@example.com"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleDropdownFormPassword1" class="form-label"
+                >Ваш вопрос</label
+              >
+              <input
+                type="text-area"
+                class="form-control"
+                id="exampleDropdownFormPassword1"
+                placeholder="Введите сюда интересующий Вас вопрос"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </form>
+          <div class="dropdown-divider my-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
